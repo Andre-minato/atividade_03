@@ -17,12 +17,12 @@ class PaginaBuscaEndereco:
         btn = self.navegador.find_element(By.XPATH, "//button[text()='Buscar']")
         btn.click()
     
-    def obter_resultado_endereco(self):
-        return self.navegador.find_element(By.XPATH, ".//tbody/tr[1]/td[1]").text
+    def obter_resultado(self):
+        table = self.navegador.find_element(By.ID, "resultado-DNEC")
+        endereco = table.find_element(By.XPATH, ".//tbody/tr[1]/td[1]").text
+        bairro = table.find_element(By.XPATH, ".//tbody/tr[1]/td[2]").text
+        cidade = table.find_element(By.XPATH, ".//tbody/tr[1]/td[3]").text
+        resultado = endereco, bairro, cidade
+        return resultado
     
-    def obter_resultado_bairro(self):
-        return self.navegador.find_element(By.XPATH, ".//tbody/tr[1]/td[2]").text
-
-    def obter_resultado_cidade(self):
-        return self.navegador.find_element(By.XPATH, ".//tbody/tr[1]/td[3]").text
         

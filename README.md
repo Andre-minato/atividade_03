@@ -1,12 +1,12 @@
 ### Segue evidência:
 * Gif do teste em execução.
-|![](/gifs/resultado.gif)  
+|![](/gifs/gif_resultado.gif)  
 
 * print Arquivo Page  
-|![](/gifs/arq_page.png)  
+|![](/gifs/page.png)  
 
 * Print Arquivo Test  
-|![](/gifs/arq_test.png)  
+|![](/gifs/test.png)  
 
 * Print Resultado  
 |![](/gifs/resultado.png)

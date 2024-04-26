@@ -22,9 +22,9 @@ def test_buscar_endereco_por_cep(navegador):
     time.sleep(0.5)
     pagina_busca.clicar_botao()
     time.sleep(2)
-    endereco = pagina_busca.obter_resultado_endereco()
-    bairro = pagina_busca.obter_resultado_bairro()
-    cidade = pagina_busca.obter_resultado_cidade()
-    assert 'Rua Amanari' == endereco
-    assert 'Vila Santa Teresinha' == bairro
-    assert 'São Paulo/SP' == cidade
+
+    resultado_obtido = pagina_busca.obter_resultado()
+    assert resultado_obtido[0] == 'Rua Amanari'
+    assert resultado_obtido[1] == 'Vila Santa Teresinha'
+    assert resultado_obtido[2] == 'São Paulo/SP'
+    
